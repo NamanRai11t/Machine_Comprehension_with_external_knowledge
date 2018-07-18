@@ -1,0 +1,27 @@
+[dataset]
+inpath = /home/namanrai/newsqa/squad_train_dataset_updated_knowledge_syn_anty_hyper.json
+devpath = /home/namanrai/newsqa/squad_dev_dataset_updated_knowledge_syn_anty_hyper.json
+testpath = /home/namanrai/newsqa/squad_dev_dataset_updated_knowledge_syn_anty_hyper.json
+word2vec = /mnt/hinoki/namanrai/glove.6B.300d_add_header.txt
+conceptnet_list = /home/namanrai/newsqa/adversarial_kim/all_labelset.txt
+outdir = /mnt/hinoki/namanrai/squad_20180706_glove_all
+name = squad_20180706_glove_all
+
+[parameter]
+vocab_size = 100000
+emb_dim = 300
+batch_size = 16
+softmax_length = 653
+limit_of_maxlen = 700
+
+[hiddenlayer]
+input_hidden = 900
+kelic_hidden = 900
+enrich_hidden = 900
+mlp_hidden = 900
+end_hidden = 1200
+
+[other]
+input_layer = 1
+enrich_layer = 1    
+use_dropout = 0.0
